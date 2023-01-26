@@ -1,9 +1,13 @@
 import Sidebar from './Sidebar';
 import shana from "./img/shana.jpg";
+import { useState } from 'react';
 
 function Main() {
+    // let response;
+    const [response, setResponse] = useState("");
     const handleClick = () => {
-        alert('Agree to our terms and sign in!');
+        // alert('Agree to our terms and sign in!');
+        setResponse("Thank you for signing in");
     }
 
     return (
@@ -35,7 +39,12 @@ function Main() {
                             </div>
                             <div className='main_sub2'>
                                 <p>Made up your mind yet?</p>
-                                <button onClick={handleClick} className='signin'>Sign in</button>
+                                {/* <p>{response}</p> */}
+                                <form>
+                                    <p className='response'>{response}</p>
+                                    <input type={"email"} name={"email"} placeholder={"milamuch@example.com"}></input>
+                                    <button onClick={handleClick} className='signup'>Sign up</button>
+                                </form>
                             </div>
                         </div>
                     </div>
