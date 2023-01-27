@@ -1,6 +1,6 @@
 const Sidebar = () => {
     return (  
-            <sidebar className="sidebar">
+            <aside className="sidebar">
                 <h3>Services</h3>
                 <div className="sidenav">
                     <ul>
@@ -12,7 +12,7 @@ const Sidebar = () => {
                         <li><a href="./App.js">Resting well</a></li>
                     </ul>
                 </div>
-            </sidebar>
+            </aside>
     );
 }
  

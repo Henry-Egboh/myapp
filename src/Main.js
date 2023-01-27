@@ -3,7 +3,6 @@ import shana from "./img/shana.jpg";
 import { useState } from 'react';
 
 function Main() {
-    // let response;
     const [response, setResponse] = useState("");
     const handleClick = () => {
         // alert('Agree to our terms and sign in!');
@@ -39,7 +38,6 @@ function Main() {
                             </div>
                             <div className='main_sub2'>
                                 <p>Made up your mind yet?</p>
-                                {/* <p>{response}</p> */}
                                 <form>
                                     <p className='response'>{response}</p>
                                     <input type={"email"} name={"email"} placeholder={"milamuch@example.com"}></input>
