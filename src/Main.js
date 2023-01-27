@@ -1,3 +1,4 @@
+// ===== MAIN COMPONENT OF THE HOME COMPONENT ======================================
 import Sidebar from './Sidebar';
 import shana from "./img/shana.jpg";
 import { useState } from 'react';

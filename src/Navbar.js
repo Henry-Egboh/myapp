@@ -12,6 +12,12 @@ const Navbar = () => {
                         <li>  
                             <Link to="/services" className="navs">Services</Link>
                         </li>
+                        <li>
+                            <Link to="/" className="navs">Quantity Feign</Link>
+                        </li>
+                        <li>  
+                            <Link to="/services" className="navs">Register</Link>
+                        </li>
                     </ul>
                 </nav>
             </header>
