@@ -27,8 +27,8 @@ body {
 .head {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  column-gap: 20rem;
+  justify-content: space-between;
+  /* column-gap: 10rem; */
   padding: 1rem 0rem;
 }
 
@@ -56,10 +56,12 @@ body {
   font-size: 1.2rem;
 }
 
+/* header color */
 #so {
   color: rgb(235, 52, 52);
   font-size: 1.4rem;
 }
+
 /* ================================================  SIDEBAR COMPONENT =================================================== */
 .sidebar {
   background-color: #e2e0e0;
@@ -93,10 +95,39 @@ body {
 }
 
 /* =========================================    MAIN COMPONENT ==================================================================== */
-/* images shana */
+/* lock the embedded video to a fixed aspect ratio for responsiveness */
+.player-wrapper {
+  position: relative;
+  padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+/* 4 images shana */
+.img {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2rem;
+}
+
+.img p {
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: center;
+}
+
 .shana {
   width: 100%;
-  height: 60%;
+}
+
+/* embedded video */
+.embed {
+  margin-bottom: 2rem;
 }
 
 .main_content {
@@ -130,7 +161,7 @@ body {
 }
 
 /* signin button */
-.signup {
+.signup, .btn {
   outline: none;
   padding: 0.6rem 1rem;
   font-size: 1rem;
@@ -138,7 +169,7 @@ body {
   background-color: #211521;
   color: #ececec;
   border-radius: 0.5rem;
-  margin: 0.5rem 0rem 0rem 1rem;
+  margin: 0rem 0rem 0rem 1rem;
   opacity: 1;
 }
 
@@ -178,21 +209,44 @@ input[type="email"]:focus {
   line-height: 1.5rem;
 }
 
+/* form */
+.form {
+  margin-top: 1rem;
+}
 
 /* ========================================== FOOTER COMPONENT ===================================================================== */
 .bg {
   background-color: hsla(34, 45%, 87%, 0.2);
 }
 
+.main_footer {
+  display: grid;
+  padding: 4rem 4rem 4rem;
+  margin-top: 4rem;
+}
+
+.base_footer {
+  padding-top: 4rem;
+  display: flex;
+  column-gap: 2rem;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.base_footer div:nth-of-type(2) ul li  {
+  display: inline;
+  border-left: 2px solid #73242a;
+  margin: 0rem 1rem;
+  padding-left: 0.5rem;
+}
+
 .footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 2rem;
-  padding: 8rem 4rem;
+  gap: 2rem;
   margin-top: 2rem;
   font-size: 0.9rem;
   font-weight: 400;
-  justify-items: center;
 }
 
 .bullet_image {
@@ -200,19 +254,18 @@ input[type="email"]:focus {
   margin-bottom: 0.4rem;
 }
 
-.footer ul {
+.main_footer ul {
   list-style: none;
 }
 
-.footer ul li a {
+.main_footer ul li a {
   text-decoration: none;
-  color: #ececec;
   color: #211521;
   padding: 0.5rem 0rem;
-  display: block;
+  /* display: block; */
 }
 
-.footer ul li a:hover {
+.main_footer ul li a:hover {
   color: #73242a;
   text-shadow: 1px 2px 4px #27504d;
 }
@@ -222,7 +275,8 @@ input[type="email"]:focus {
 }
 
 
-/* ================================================= MAIN SERVICES COMPONENT ============================================*/
+/* ================================================= SERVICES COMPONENT ============================================
+===================================MAIN ================================================================*/
 .main_services {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
