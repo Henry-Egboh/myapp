@@ -103,7 +103,9 @@ function Main() {
 
    function EmbedVideo() {
     return (
-        <ReactPlayer url='https://youtu.be/t7owFiihXgg' controls muted light={shana} volume={1} width={1080} height={540} />
+        <div className='player-wrapper'>
+        <ReactPlayer url='https://youtu.be/t7owFiihXgg' controls muted light={shana} volume={1} width='100%' height='100%' className='react-player' />
+        </div>
     );
    };  
 }
